@@ -4,3 +4,4 @@ cd Rpi4
 从repo init -u ssh://git@gitmirror.cixtech.com/cix_val/diags/manifest -b master -m default.xml 下载的主线代码中拷贝acpica和toolchain到Rpi目录下
 
 在SD卡创建EFI/BBOT目录，将inp.in放入EFI/BOOT目录，运行./build.sh编译 ，结束将Build/RPi4/DEBUG_GCC5/FV/RPI_EFI.fd放入根目录，Build/RPi4/DEBUG_GCC5/AARCH64/Platform/RaspberryPi/RPi4/Application/SltFramework/SltFramework/OUTPUT/SltFramework.efi放入EFI/BOOT目录并命名为BOOTAA64.EFI
+出问题的一处位置在edk2/FatPkg/EnhancedFatDxe/ReadWrite.c:284处的跳转
